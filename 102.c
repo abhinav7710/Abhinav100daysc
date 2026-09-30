@@ -2,18 +2,17 @@
 #include <stdio.h>
 int findCeil(int arr[], int n, int x) {
     int left = 0, right = n - 1;
-    int result = -1; // Initialize result to -1 (not found)
-
+    int result = -1; 
     while (left <= right) {
         int mid = left + (right - left) / 2;
 
         if (arr[mid] >= x) {
-            result = mid; // Update result to current mid
-            right = mid - 1; // Search in the left half
+            result = mid; 
+            right = mid - 1; 
         } else {
-            left = mid + 1; // Search in the right half
+            left = mid + 1;
         }
     }
 
-    return result; // Return the index of the ceil or -1 if not found
+    return result;
 }
